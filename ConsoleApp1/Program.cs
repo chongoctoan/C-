@@ -1,11 +1,44 @@
 ﻿using ConsoleApp1;
 using ConsoleApp1.btvn1;
+using ConsoleApp1.btvn2;
 using ConsoleApp1.session1;
 using ConsoleApp1.session2;
-
+using ConsoleApp1.session4;
 public class Program
 {
     static void Main(string[] args) 
+    {
+        StringToVoid stv = new StringToVoid(ShowMessage);
+        StringToVoid stv2 = new StringToVoid(DemoDelegate.SayHello);
+        StringToVoid stv3 = new StringToVoid(new DemoDelegate().ShowInfo);
+
+        stv += DemoDelegate.SayHello;
+        stv += new DemoDelegate().ShowInfo;
+        stv("Xin chao cac ban");
+
+        DemoEvent de = new DemoEvent();
+        de.Invoke();
+    }
+    static void ShowMessage(string msg) 
+    {
+        Console.WriteLine(msg);
+    }
+    static void Main4(string[] args) 
+    {
+        PhoneBook pb= new PhoneBook();
+        pb.InsertPhone("Toan", "0111111");
+        pb.InsertPhone("Toan2", "0222222");
+        pb.InsertPhone("Toan3", "0333333");
+        pb.InsertPhone("Toan4", "0444444");
+        pb.InsertPhone("Toan5", "0555555");
+        pb.Sort();
+
+        foreach (PhoneNumber p in pb.PhoneList) 
+        {
+          Console.WriteLine(p.ToString());
+        }
+    }
+    static void Main3(string[] args) 
     {
         try
         {
