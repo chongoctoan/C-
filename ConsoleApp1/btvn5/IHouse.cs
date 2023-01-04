@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.btvn5
 {
-    public class Api
+    public interface IHouse
     {
+        public void input();
+        public void display();
     }
 }

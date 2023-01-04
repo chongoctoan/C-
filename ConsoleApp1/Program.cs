@@ -1,6 +1,8 @@
 ﻿using ConsoleApp1;
 using ConsoleApp1.btvn1;
 using ConsoleApp1.btvn2;
+using ConsoleApp1.btvn4;
+using ConsoleApp1.btvn5;
 using ConsoleApp1.session1;
 using ConsoleApp1.session2;
 using ConsoleApp1.session4;
@@ -8,6 +10,16 @@ using ConsoleApp1.session5;
 public class Program
 {
     static void Main(string[] args) 
+    {
+        Data();
+    }
+    static async void Data() 
+    {
+        CallApiWeather wt = new CallApiWeather();
+        ApiWeather w = await wt.WetherData();
+        Console.WriteLine(w.ToString());
+    }
+    static void Main7(string[] args) 
     {
         Fetch();
     }
