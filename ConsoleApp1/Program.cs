@@ -1,6 +1,7 @@
 ﻿using ConsoleApp1;
 using ConsoleApp1.btvn1;
 using ConsoleApp1.btvn2;
+using ConsoleApp1.btvn3;
 using ConsoleApp1.btvn4;
 using ConsoleApp1.btvn5;
 using ConsoleApp1.session1;
@@ -18,6 +19,11 @@ public class Program
         CallApiWeather wt = new CallApiWeather();
         ApiWeather w = await wt.WetherData();
         Console.WriteLine(w.ToString());
+    }
+    static void Main8(string[]args) 
+    {
+        Tinhtien ttd = new Tinhtien();
+        ttd.KhachHangVN(30, 50, 2000, 20);
     }
     static void Main7(string[] args) 
     {
