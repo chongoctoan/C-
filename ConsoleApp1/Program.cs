@@ -11,7 +11,14 @@ using ConsoleApp1.session4;
 using ConsoleApp1.session5;
 public class Program
 {
-    static void Main(string[] args) 
+    static void Main(string[] args)
+    {
+        KeThua a = new Tiger(200, "tiger");
+        a.Show();
+        a = new Lion(50, "lion");
+        a.Show();
+    }
+    static void Main10(string[] args) 
     {
         Cylinder cld = new Cylinder();
         cld.Result();
