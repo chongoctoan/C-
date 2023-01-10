@@ -4,6 +4,7 @@ using ConsoleApp1.btvn2;
 using ConsoleApp1.btvn3;
 using ConsoleApp1.btvn4;
 using ConsoleApp1.btvn5;
+using ConsoleApp1.GeometryExample;
 using ConsoleApp1.session1;
 using ConsoleApp1.session2;
 using ConsoleApp1.session4;
@@ -11,6 +12,12 @@ using ConsoleApp1.session5;
 public class Program
 {
     static void Main(string[] args) 
+    {
+        Cylinder cld = new Cylinder();
+        cld.Result();
+        
+    }
+    static void Main9(string[] args) 
     {
         Data();
     }
